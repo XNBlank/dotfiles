@@ -1,14 +1,14 @@
 [colors]
-background = #282C34
-foreground = #ABB2BF
+background = #1B1D1E
+foreground = #ACC2CF
 foreground-alt= #528BFF
-black = #000000
-red = #E06C75
-green = #98C379
-orange = #D19A66
-blue = #61AEEE
-magenta = #C678DD
-cyan = #56B6C2
+black = #010101
+red = #F92672
+green = #82B414
+orange = #FD971F
+blue = #4E82AA
+magenta = #8C54FE
+cyan = #eb47eb
 lightgray = #ABB2BF
 darkgray = #5C6370
 white = #FFFFFF
@@ -69,7 +69,7 @@ time = %H:%M:%S
 
 format =  <label>
 format-prefix = " "
-format-foreground = ${colors.orange}
+format-foreground = ${colors.red}
 
 label = %time%
 
@@ -90,7 +90,7 @@ label = %date%
 type = internal/volume
 master-mixer = Master
 
-format-volume-foreground = ${colors.green}
+format-volume-foreground = ${colors.cyan}
 
 format-volume = %{T1} <label-volume>
 
@@ -141,7 +141,7 @@ type = internal/battery
 full-at = 98
 
 battery = BAT1
-adapter = AC0
+adapter = ACAD
 
 poll-interval = 5
 
@@ -149,10 +149,10 @@ time-format = %H:%M
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
-label-full = 
+label-full =  A/C
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.foreground-alt}
+format-charging-foreground = ${colors.green}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.orange}
@@ -185,7 +185,7 @@ wrapping-scroll = true
 
 label-focused = %index%
 label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.foreground-alt}
+label-focused-background = ${colors.magenta}
 label-focused-padding = 1
 
 label-unfocused = %index%
