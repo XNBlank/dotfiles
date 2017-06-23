@@ -1,0 +1,1 @@
+/home/blank/.homesick/repos/dotfiles/home/.config/polybar/spotify.sh
