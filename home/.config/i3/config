@@ -159,13 +159,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 #maim
 #display capture
-bindsym Control+Shift+Print exec "maim ~/Pictures/maimScreenShot.png"
+bindsym Control+Shift+Print exec "result=`zenity --entry --title='maim' --text='Desktop Screenshot (Filename)'`; sleep 0.8 && maim ~/Pictures/$result.png"
 
 #region capture
-bindsym Print exec "maim -s ~/Pictures/maimScreenShot.png"
+bindsym Print exec "result=`zenity --entry --title='maim' --text='Selection Screenshot (Filename)'`; sleep 0.8 && maim -s ~/Pictures/$result.png"
 
 #window capture
-bindsym Control+Print exec "maim -i ~/Pictures/maimScreenshot.png"
+bindsym Control+Print exec "result=`zenity --entry --title='maim' --text='Window Screenshot (Filename)'`; sleep 0.8 && maim -i ~/Pictures/$result.png"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

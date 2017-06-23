@@ -35,7 +35,8 @@ tray-padding 10
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = keyboard volume battery wireless-network wired-network calendar clock powermenu
+modules-right = spotify-icon spotify updates volume battery wireless-network wired-network calendar clock 
+powermenu
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -52,6 +53,24 @@ format-prefix = " "
 format-suffix = " "
 
 format-margin = 1
+
+[module/updates]
+type = custom/script
+interval = 300
+format = <label>
+format-underline = #dc322f
+label = "%output:0:30%"
+exec = ~/.config/polybar/updates.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+
+[module/spotify]
+type = custom/script
+format =  <label>
+exec = ~/.config/polybar/spotify.sh
+interval = 0
+tail = true
+format-foreground = ${colors.green}
+label-foreground = ${colors.white}
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -126,7 +145,7 @@ menu-1-1 = reboot
 menu-1-1-exec = reboot
 
 menu-2-0 = power off
-menu-2-0-exec = poweroff
+menu-2-0-exec = i3-msg exit && poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
