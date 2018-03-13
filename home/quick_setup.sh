@@ -31,8 +31,8 @@ rm -r /tmp/pacaur_install
 ### Installing my stuff
 
 # Install xorg and non-aur packages
-sudo pacman -S xorg-server xorg-xclock xorg-xinit xorg-xrandr xterm thunar sddm network-manager \
-    alsa pulseaudio pulseaudio-alsa ffmpeg imagemagick maim zenity feh --noconfirm --needed
+sudo pacman -S xorg-server xorg-xclock xorg-xinit xorg-xrandr xterm thunar sddm networkmanager \
+    pulseaudio pulseaudio-alsa ffmpeg imagemagick maim zenity feh --noconfirm --needed
 
 
 # Install WM and stuff
