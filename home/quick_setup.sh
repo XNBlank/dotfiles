@@ -44,6 +44,7 @@ gpg --recv-key 0x61B7B526D98F0353
 # Install personal apps
 pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git playerctl-git --noconfirm --noedit --needed
 
+# We're done! To make sure, set login to use graphical by default, then enable and start the display manager.
 sudo systemctl set-default graphical.target 
 sudo systemctl enable sddm.service
 sudo systemctl start sddm.service 
