@@ -30,10 +30,10 @@ rm -r /tmp/pacaur_install
 
 ### Installing my stuff
 
-# Install xorg
-if [ ! -n "$(pacman -Qs xorg-server)" ]; then
-    sudo pacman -S xorg-server xorg-xclock xorg-xinit xorg-xrandr xterm thunar sddm feh --noconfirm --needed
-fi
+# Install xorg and non-aur packages
+sudo pacman -S xorg-server xorg-xclock xorg-xinit xorg-xrandr xterm thunar sddm network-manager \
+    alsa pulseaudio pulseaudio-alsa ffmpeg imagemagick maim zenity feh --noconfirm --needed
+
 
 # Install WM and stuff
 pacaur -S i3-gaps-next-git i3status-git i3lock-git otf-font-awesome-4 ttf-monaco ttf-fira-mono ttf-fira-sans polybar-git rofi-git dunst-git termite-git compton-git --noconfirm --noedit --needed
@@ -42,7 +42,7 @@ pacaur -S i3-gaps-next-git i3status-git i3lock-git otf-font-awesome-4 ttf-monaco
 gpg --recv-key 0x61B7B526D98F0353
 
 # Install personal apps
-pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git playerctl-git --noconfirm --noedit --needed
+pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git playerctl-git neofetch-git  --noconfirm --noedit --needed
 
 # We're done! To make sure, set login to use graphical by default, then enable and start the display manager.
 sudo systemctl set-default graphical.target 
