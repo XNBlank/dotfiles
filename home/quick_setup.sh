@@ -32,7 +32,7 @@ rm -r /tmp/pacaur_install
 
 # Install xorg and non-aur packages
 sudo pacman -S xorg-server xorg-xclock xorg-xinit xorg-xrandr xterm thunar sddm networkmanager \
-    pulseaudio pulseaudio-alsa ffmpeg imagemagick maim zenity feh --noconfirm --needed
+    pulseaudio pulseaudio-alsa imagemagick maim zenity feh --noconfirm --needed
 
 
 # Install WM and stuff
@@ -45,7 +45,7 @@ gpg --recv-key 0x61B7B526D98F0353
 gpg --recv-key 0x8F0871F202119294
 
 # Install personal apps
-pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git playerctl-git neofetch-git  --noconfirm --noedit --needed
+pacaur -S discord-canary firefox-nightly neovim-git spotify ffmpeg-git mpv-git youtube-dl-git playerctl-git neofetch-git  --noconfirm --noedit --needed
 
 # We're done! To make sure, set login to use graphical by default, then enable and start the display manager.
 sudo systemctl set-default graphical.target 
