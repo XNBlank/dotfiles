@@ -41,6 +41,9 @@ pacaur -S i3-gaps-next-git i3status-git i3lock-git otf-font-awesome-4 ttf-monaco
 # Firefox PGP key seems to break often so..
 gpg --recv-key 0x61B7B526D98F0353
 
+# Also need the PGP keys from libc++
+gpg --recv-key 0x8F0871F202119294
+
 # Install personal apps
 pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git playerctl-git neofetch-git  --noconfirm --noedit --needed
 
