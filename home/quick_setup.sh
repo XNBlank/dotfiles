@@ -32,14 +32,17 @@ rm -r /tmp/pacaur_install
 
 # Install xorg
 if [ ! -n "$(pacman -Qs xorg-server)" ]; then
-    sudo pacman -S xorg-server xorg-xclock xorg-xinit xterm thunar sddm feh --noconfirm --needed
+    sudo pacman -S xorg-server xorg-xclock xorg-xinit xorg-xrandr xterm thunar sddm feh --noconfirm --needed
 fi
 
 # Install WM and stuff
 pacaur -S i3-gaps-next-git i3status-git i3lock-git otf-font-awesome-4 ttf-monaco ttf-fira-mono ttf-fira-sans polybar-git rofi-git dunst-git termite-git compton-git --noconfirm --noedit --needed
 
+# Firefox gpg key seems to break often so..
+gpg --recv-key 0x61B7B526D98F0353
+
 # Install personal apps
-pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git --noconfirm --noedit --needed
+pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git playerctl-git --noconfirm --noedit --needed
 
 sudo systemctl set-default graphical.target 
 sudo systemctl enable sddm.service
