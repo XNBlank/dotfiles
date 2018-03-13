@@ -36,7 +36,7 @@ if [ ! -n "$(pacman -Qs xorg-server)" ]; then
 fi
 
 # Install WM and stuff
-pacaur -S i3-gaps-next-git i3-status i3lock-git otf-font-awesome-4 polybar-git rofi-git dunst-git termite-git compton-git --noconfirm --noedit --needed
+pacaur -S i3-gaps-next-git i3status-git i3lock-git otf-font-awesome-4 polybar-git rofi-git dunst-git termite-git compton-git --noconfirm --noedit --needed
 
 # Install personal apps
 pacaur -S discord-canary firefox-nightly neovim-git spotify mpv-git youtube-dl-git --noconfirm --noedit --needed
