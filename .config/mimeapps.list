@@ -1,0 +1,30 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Nightly-RSU1GZ.desktop
+x-scheme-handler/https=userapp-Nightly-RSU1GZ.desktop
+x-scheme-handler/ftp=userapp-Nightly-RSU1GZ.desktop
+x-scheme-handler/chrome=userapp-Nightly-RSU1GZ.desktop
+text/html=userapp-Nightly-RSU1GZ.desktop
+application/x-extension-htm=userapp-Nightly-RSU1GZ.desktop
+application/x-extension-html=userapp-Nightly-RSU1GZ.desktop
+application/x-extension-shtml=userapp-Nightly-RSU1GZ.desktop
+application/xhtml+xml=userapp-Nightly-RSU1GZ.desktop
+application/x-extension-xhtml=userapp-Nightly-RSU1GZ.desktop
+application/x-extension-xht=userapp-Nightly-RSU1GZ.desktop
+
+[Added Associations]
+x-scheme-handler/http=exo-web-browser.desktop
+x-scheme-handler/https=exo-web-browser.desktop
+x-scheme-handler/ftp=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+x-scheme-handler/chrome=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+text/html=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+application/x-extension-htm=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+application/x-extension-html=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+application/x-extension-shtml=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+application/xhtml+xml=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+application/x-extension-xhtml=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+application/x-extension-xht=userapp-Firefox-3BSEGZ.desktop;userapp-Nightly-RSU1GZ.desktop;
+application/x-shellscript=wine-extension-txt.desktop;nvim.desktop;
+image/png=feh.desktop;mupdf.desktop;
+text/x-log=nvim.desktop;
+application/x-ms-dos-executable=wine-staging.desktop;
+text/plain=wine-extension-txt.desktop;

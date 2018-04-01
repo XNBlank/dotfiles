@@ -7,7 +7,7 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Monaco 10
+font = Fira Mono 11
 scrollback_lines = 10000
 search_wrap = true
 #icon_name = terminal
@@ -39,10 +39,10 @@ filter_unmatched_urls = true
 #background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(17, 19, 20, 0.98)
+background = rgba(4, 28, 45, 0.95)
 
 # if unset, will reverse foreground and background
-highlight = #2f2f2f
+highlight = rgba(65, 78, 94, 0.99)
 
 # colors from color0 to color254 can be set
 #color0 = #3f3f3f
@@ -62,43 +62,83 @@ highlight = #2f2f2f
 #color14 = #93e0e3
 #color15 = #ffffff
 
+foreground=   #efefef
+foreground_bold=   #efefef
+# background=   #080a16
+cursor=	      #a9aeb4
+                     
+# black
+color0=       #0c0e17
+color8=       #3d4550
+                     
+# red
+color1=       #c75d5b
+color9=       #f77d7b
+                     
+# green
+color2=       #4bd76d
+color10=      #6bf77d
+                     
+# yellow
+color3=       #d6a31c
+color11=      #f7cb2d
+                     
+# blue
+color4=       #7275e3
+color12=      #94aaf3
+                     
+# magenta
+color5=       #8562b6
+color13=      #b375f6
+                     
+# cyan
+color6=       #1ac699
+color14=      #4be4aa
+                     
+# white
+color7=       #a9aeb4
+color15=      #dedee0
+
+
+
+
 # special
-foreground      = #ffffff
-foreground_bold = #ffffff
-cursor          = #ffffff
+# foreground      = #ffffff
+# foreground_bold = #ffffff
+# cursor          = #ffffff
 #background      = #010101
 
 # black
-color0  = #1b1d1e
-color8  = #505354
+# color0  = #1b1d1e
+# color8  = #505354
 
 # red
-color1  = #f92672
-color9  = #ff5995
+# color1  = #f92672
+# color9  = #ff5995
 
 # green
-color2  = #82b414
-color10 = #b6e354
+# color2  = #82b414
+# color10 = #b6e354
 
 # yellow
-color3  = #fd971f
-color11 = #feed6c
+# color3  = #fd971f
+# color11 = #feed6c
 
 # blue
-color4  = #4770eb
-color12 = #0c73c2
+# color4  = #4770eb
+# color12 = #0c73c2
 
 # magenta
-color5  = #8c54fe
-color13 = #9e6ffe
+# color5  = #8c54fe
+# color13 = #9e6ffe
 
 # cyan
-color6  = #75b3f0
-color14 = #899ca1
+# color6  = #7ad7eb
+# color14 = #aae7fe
 
 # white
-color7  = #ccccc6
-color15 = #f8f8f2
+# color7  = #ccccc6
+# color15 = #f8f8f2
 
 
 [hints]
@@ -113,3 +153,7 @@ color15 = #f8f8f2
 #roundness = 2.0
 
 # vim: ft=dosini cms=#%s
+
+
+
+

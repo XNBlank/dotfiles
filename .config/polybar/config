@@ -1,0 +1,182 @@
+[colors]
+;Base colors from .Xresources
+bg	= ${xrdb:background}
+bg-alt	= #222445
+fg 	= ${xrdb:foreground}
+fg-alt	= ${xrdb:color8}
+red 	= ${xrdb:color1}
+red-alt = ${xrdb:color9}
+green       =  ${xrdb:color2}
+green-alt   =  ${xrdb:color10}
+yellow      =  ${xrdb:color3}
+yellow-alt  =  ${xrdb:color11}
+blue        =  ${xrdb:color4}
+blue-alt    =  ${xrdb:color12}
+magenta     =  ${xrdb:color5}
+magenta-alt =  ${xrdb:color13}
+cyan        =  ${xrdb:color6}
+cyan-alt    =  ${xrdb:color14}
+white       =  ${xrdb:color7}
+white-alt = ${xrdb:color15}
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[bar/left]
+monitor = ${env:MONITOR:}
+bottom = false
+width = 100%
+height = 28
+override-redirect = false
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+spacing = 0
+padding-left = 1
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 2
+
+font-0 = Fira Sans Medium:pixelsize=10;1
+font-1 = Font Awesome 5 Free Solid:antialia=false:size=10;2
+font-2 = Font Awesome 5 Brands:antialia=false:size=12;2
+font-3 = Font Awesome 5 Free:antialia=false:size=12;2
+;font-4 = Font Awesome:antialia=false:size=12;2
+
+tray-position = right
+tray-padding = 3
+tray-transparent = false
+;tray-background = #101010
+
+modules-left = i3 xwindow
+modules-center = date
+modules-right = player volume cpu memory wlan
+
+[module/i3]
+type = internal/i3
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+
+strip-wsnumbers = true
+enable-scroll = true
+pin-workspaces = true
+
+label-focused = "%icon%"
+label-focused-foreground = ${colors.blue}
+label-focused-background = ${colors.bg-alt}
+label-focused-padding = 4
+
+label-unfocused = "%icon%" 
+label-unfocused-padding = 4
+label-unfocused-foreground = ${colors.blue-alt}
+
+label-urgent = "%icon%"
+label-urgent-foreground = ${colors.red}
+;label-urgent-background = ${colors.white}
+label-urgent-padding = 4
+
+label-visible = "%icon%"
+label-visible-foreground = ${colors.blue}
+label-visible-background = ${colors.bg-alt}
+label-visible-padding = 4
+
+[module/player]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh
+interval = 3
+click-left = playerctl previous
+click-right = playerctl next
+click-middle = playerctl play-pause
+
+[module/cpu]
+type = internal/cpu
+intervaal = 2
+format-prefix = ""
+format-prefix-foreground = ${colors.blue}
+label = " %percentage%%"
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = ""
+format-prefix-foreground = ${colors.blue}
+label = " %percentage_used%%"
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+
+format-mounted =  <label-mounted>
+format-unmounted = <label-unmounted>
+
+format-mounted-foreground = ${colors.blue}
+
+label-mounted = %used% / %total%
+label-mounted-foreground = ${colors.fg}
+label-unmounted = %mountpoint%: not mounted
+interval = 10
+
+fixed-values = true
+spacing = 4
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = "%a %d %b %Y - "
+
+time = %I:%M %p
+time-alt = %I:%M %p
+
+label = "%date% %time%"
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 3.0
+
+format-connected = <ramp-signal><label-connected>
+
+label-connected = " UP"
+label-connected-foreground = ${colors.fg}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.blue}
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+label-muted =   "   MUTE "
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
+format-volume-padding = 2
+label-volume = "%percentage%%"
+label-volume-padding = 0
+format-volume-foreground = ${colors.blue}
+format-muted-foreground = ${colors.fg-alt}
+mapping = true
+
+[module/xwindow]
+type = internal/xwindow
+format-cpu = <format-prefix> <label>
+format-prefix = "    "
+format-prefix-foreground = ${colors.blue}
+format-prefix-background = ${colors.bg-alt}
+label = %title:0:75:...%
+label-background = ${colors.bg-alt}
+label-padding = 2
+label-foreground = ${colors.blue}
